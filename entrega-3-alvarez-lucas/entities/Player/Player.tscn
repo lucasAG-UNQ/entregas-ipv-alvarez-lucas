@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://entities/Player/Cannon.gd" type="Script" id=1]
+[ext_resource path="res://entities/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/player.png" type="Texture" id=3]
+[ext_resource path="res://assets/cannon.png" type="Texture" id=4]
+[ext_resource path="res://entities/Player/Proyectile.tscn" type="PackedScene" id=5]
+
+[node name="Player" type="Sprite"]
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Cannon" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+script = ExtResource( 1 )
+proyectile_escene = ExtResource( 5 )
+
+[node name="ShootPosition" type="Position2D" parent="Cannon"]
+position = Vector2( 15, 0 )
