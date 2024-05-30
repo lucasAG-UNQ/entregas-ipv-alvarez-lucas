@@ -29,10 +29,10 @@ func _on_current_player_changed(player: Player) -> void:
 	_on_hp_changed(player.hp, player.max_hp)
 	
 	player.connect("mana_changed", self, "_on_mana_changed")
-	_on_hp_changed(player.mana, player.max_mana)
+	_on_mana_changed(player.mana, player.max_mana)
 	
 	player.connect("stamina_changed", self, "_on_stamina_changed")
-	_on_hp_changed(player.stamina, player.max_stamina)
+	_on_stamina_changed(player.stamina, player.max_stamina)
 
 
 # Callback de cambio de HP.
